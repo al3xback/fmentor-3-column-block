@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+
+.cards {
+	width: 100%;
+	max-width: func.em(360, var.$font-size-primary);
+	padding: func.em(30, var.$font-size-primary) 0
+		func.em(60, var.$font-size-primary);
+	margin: 0 auto;
+}
+
+.cards__inner {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.cards__inner::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.card {
+	padding: func.em(48, var.$font-size-primary);
+	background-color: var.$color-black;
+	color: var.$color-white-light;
+}
+
+.card--sedans {
+	background-color: var.$color-bright-orange;
+}
+
+.card--suvs {
+	background-color: var.$color-dark-cyan;
+}
+
+.card--luxury {
+	background-color: var.$color-very-dark-cyan;
+}
+
+.card__img {
+	width: func.em(60, var.$font-size-primary);
+	height: auto;
+	margin-bottom: func.em(25, var.$font-size-primary);
+}
+
+.card__title {
+	margin-bottom: func.em(25, 40);
+	color: var.$color-very-light-gray;
+	text-transform: uppercase;
+}
+
+.card__btn {
+	margin-top: func.em(50, var.$font-size-primary);
+}
+
+@media (min-width: 51.25em) {
+	.cards {
+		max-width: func.em(920, var.$font-size-primary);
+	}
+
+	.card {
+		float: left;
+		width: 33.33%;
+	}
+}
