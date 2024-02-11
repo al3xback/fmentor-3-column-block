@@ -41,7 +41,7 @@
 .card__img {
 	width: func.em(60, var.$font-size-primary);
 	height: auto;
-	margin-bottom: func.em(25, var.$font-size-primary);
+	margin-bottom: func.em(35, var.$font-size-primary);
 }
 
 .card__title {
@@ -51,7 +51,7 @@
 }
 
 .card__btn {
-	margin-top: func.em(50, var.$font-size-primary);
+	margin-top: func.em(30, var.$font-size-primary);
 }
 
 @media (min-width: 51.25em) {
@@ -62,5 +62,9 @@
 	.card {
 		float: left;
 		width: 33.33%;
+	}
+
+	.card__btn {
+		margin-top: func.em(75, var.$font-size-primary);
 	}
 }
